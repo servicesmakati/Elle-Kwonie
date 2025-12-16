@@ -1,192 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Elle Boosting</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elle Boosting</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --pink: #EFB0C0;
-      --light-pink: #F7D6DF;
-      --blue: #7FA6C4;
-      --dark-blue: #1F3B4D;
-      --white: #FAFAFA;
-    }
+<style>
+:root {
+  --pink: #EFB0C0;
+  --light-pink: #F7D6DF;
+  --blue: #7FA6C4;
+  --dark-blue: #1F3B4D;
+  --white: #FAFAFA;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Nunito', sans-serif;
-      background: linear-gradient(180deg, var(--light-pink), var(--white));
-      color: var(--dark-blue);
-      overflow-x: hidden;
-    }
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(180deg, var(--light-pink), var(--white));
+  color: var(--dark-blue);
+}
 
-    /* 🌸 HERO */
-    header {
-      text-align: center;
-      padding: 70px 20px 90px;
-    }
+/* HERO */
+header {
+  text-align: center;
+  padding: 80px 20px 100px;
+  background:
+    radial-gradient(circle at center, #ffffff 0%, #f7d6df 55%, transparent 70%);
+}
 
-    /* LOGO FIX */
-    .logo-wrap {
-      width: 240px;
-      height: 240px;
-      margin: 0 auto 20px;
-      background: radial-gradient(circle, #fff 40%, var(--light-pink));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 20px 40px rgba(239,176,192,0.4);
-    }
+/* LOGO VIDEO */
+.logo-video {
+  width: 280px;
+  max-width: 90%;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  box-shadow:
+    0 25px 45px rgba(239,176,192,0.45);
+}
 
-    .logo-wrap img {
-      width: 200px;
-      height: auto;
-      object-fit: contain;
-      mix-blend-mode: multiply; /* softens black bg a bit */
-    }
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.6rem;
+  margin: 10px 0 5px;
+}
 
-    header h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.6rem;
-      margin: 10px 0 5px;
-    }
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
 
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 36px;
+  background: var(--blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(127,166,196,0.5);
+  transition: all 0.3s ease;
+}
 
-    /* BUTTON */
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 36px;
-      background: var(--blue);
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-      box-shadow: 0 10px 25px rgba(127,166,196,0.5);
-      transition: all 0.3s ease;
-    }
+.btn:hover {
+  transform: translateY(-4px) scale(1.03);
+}
 
-    .btn:hover {
-      transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 16px 35px rgba(127,166,196,0.6);
-    }
+/* SECTIONS */
+section {
+  padding: 70px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    /* SECTIONS */
-    section {
-      padding: 70px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
+.section-title h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.1rem;
+}
 
-    .section-title h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.1rem;
-    }
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
 
-    /* 🌸 CARDS GRID */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
+.card {
+  background: white;
+  border-radius: 28px;
+  padding: 35px 30px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+}
 
-    /* CARD ANIMATION */
-    .card {
-      background: white;
-      border-radius: 28px;
-      padding: 35px 30px;
-      text-align: center;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-      animation: floatUp 0.8s ease forwards;
-      transition: all 0.35s ease;
-      position: relative;
-    }
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 55px rgba(239,176,192,0.4);
+}
 
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 28px;
-      background: linear-gradient(135deg, var(--light-pink), transparent);
-      opacity: 0;
-      transition: 0.35s;
-    }
+.card h3 {
+  font-family: 'Poppins', sans-serif;
+}
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 25px 55px rgba(239,176,192,0.4);
-    }
+.card span {
+  display: block;
+  margin: 15px 0;
+  font-weight: 600;
+  color: var(--blue);
+}
 
-    .card:hover::before {
-      opacity: 1;
-    }
+/* FOOTER */
+footer {
+  background: var(--dark-blue);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 0.9rem;
+}
 
-    .card h3 {
-      font-family: 'Poppins', sans-serif;
-      margin-top: 0;
-    }
-
-    .card span {
-      display: block;
-      margin: 15px 0;
-      font-weight: 600;
-      color: var(--blue);
-    }
-
-    /* FLOAT ANIMATION */
-    @keyframes floatUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--dark-blue);
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: var(--pink);
-      text-decoration: none;
-      font-weight: 600;
-    }
-  </style>
+footer a {
+  color: var(--pink);
+  text-decoration: none;
+  font-weight: 600;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo-wrap">
-    <img src="logo2.png" alt="Elle-Kwonie Boosting Logo">
-  </div>
+  <!-- 🔁 Replace src with your PixVerse export -->
+  <video class="logo-video" autoplay loop muted playsinline>
+    <source src="logoanimation.mp4" type="video/mp4">
+  </video>
 
   <h1>Elle Boosting</h1>
   <p>Soft • Safe • Trusted Social Media Growth</p>
@@ -205,21 +165,21 @@
       <h3>Facebook Boost</h3>
       <p>Increase likes, followers, and engagement safely.</p>
       <span>Starts at ₱---</span>
-      <a href="#" class="btn">Order Now</a>
+      <a href="https://www.facebook.com/elle.kwonie?mibextid=wwXIfr&rdid=sznNFjPtSSdQ4EV2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16KqpCxJzA%2F%3Fmibextid%3DwwXIfr&http_ref=eyJ0cyI6IjE3NjU5MDA1NjE2MzEiLCJyIjoiaHR0cHM6XC9cL3NlcnZpY2VzbWFrYXRpLmdpdGh1Yi5pb1wvIn0%3D&cah=2&rwtsid=XgD17UqEU8S81tSZn" class="btn">Order Now</a>
     </div>
 
     <div class="card">
       <h3>Instagram Boost</h3>
       <p>Grow followers, reels, and story views.</p>
       <span>Starts at ₱---</span>
-      <a href="#" class="btn">Order Now</a>
+      <a href="https://www.facebook.com/elle.kwonie?mibextid=wwXIfr&rdid=sznNFjPtSSdQ4EV2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16KqpCxJzA%2F%3Fmibextid%3DwwXIfr&http_ref=eyJ0cyI6IjE3NjU5MDA1NjE2MzEiLCJyIjoiaHR0cHM6XC9cL3NlcnZpY2VzbWFrYXRpLmdpdGh1Yi5pb1wvIn0%3D&cah=2&rwtsid=XgD17UqEU8S81tSZn" class="btn">Order Now</a>
     </div>
 
     <div class="card">
       <h3>TikTok Boost</h3>
       <p>Boost views, likes, shares, and followers.</p>
       <span>Starts at ₱---</span>
-      <a href="#" class="btn">Order Now</a>
+      <a href="https://www.facebook.com/elle.kwonie?mibextid=wwXIfr&rdid=sznNFjPtSSdQ4EV2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16KqpCxJzA%2F%3Fmibextid%3DwwXIfr&http_ref=eyJ0cyI6IjE3NjU5MDA1NjE2MzEiLCJyIjoiaHR0cHM6XC9cL3NlcnZpY2VzbWFrYXRpLmdpdGh1Yi5pb1wvIn0%3D&cah=2&rwtsid=XgD17UqEU8S81tSZn" class="btn">Order Now</a>
     </div>
   </div>
 </section>
