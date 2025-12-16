@@ -57,3 +57,153 @@
       color: white;
       text-decoration: none;
       border-radius: 30px;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #6e96b8;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 25px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    .card span {
+      display: block;
+      margin: 15px 0;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    footer {
+      background: var(--dark-blue);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--pink);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header>
+    <!-- Replace with her logo -->
+    <img src="logo.png" alt="ELLE Boosting Logo">
+
+    <h1>ELLE Boosting</h1>
+    <p>Soft • Safe • Trusted Social Media Growth</p>
+
+    <a href="#services" class="btn">View Services</a>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-title">
+      <h2>Our Boosting Services</h2>
+      <p>Choose your platform and grow beautifully ✨</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Facebook Boost</h3>
+        <p>Increase likes, followers, and post engagement safely.</p>
+        <span>Starts at ₱---</span>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+
+      <div class="card">
+        <h3>Instagram Boost</h3>
+        <p>Grow followers, likes, reels, and story views.</p>
+        <span>Starts at ₱---</span>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+
+      <div class="card">
+        <h3>TikTok Boost</h3>
+        <p>Boost views, likes, shares, and followers.</p>
+        <span>Starts at ₱---</span>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section>
+    <div class="section-title">
+      <h2>Why Choose Us?</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🌸 Safe Methods</h3>
+        <p>No password needed. Organic-looking growth.</p>
+      </div>
+
+      <div class="card">
+        <h3>⚡ Fast Delivery</h3>
+        <p>See results within hours, not days.</p>
+      </div>
+
+      <div class="card">
+        <h3>💗 Friendly Support</h3>
+        <p>We reply kindly and clearly to all messages.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 ELLE Boosting • Made with 💗</p>
+    <p>Contact us on <a href="#">Facebook</a> or <a href="#">Instagram</a></p>
+  </footer>
+
+</body>
+</html>
